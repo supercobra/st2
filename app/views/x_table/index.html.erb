@@ -1,0 +1,35 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Table: <%= @gizmo.name %></h1>
+columns: <%= @gizmo.table_definition.x_columns.count %>
+
+<!-- Table -->
+<!-- Table -->
+<!-- Table -->
+<!-- Table -->
+<div class="my_table">
+  <!-- Table header-->
+  <!-- Table header-->
+  <!-- Table header-->
+  <!-- Table header-->
+  <div class="my_row">
+    <% @gizmo.table_definition.x_columns.each do |col| %>
+      <div class="my_cell">
+        <%= col.name %>
+      </div>
+    <% end %>
+  </div>
+  <!-- Table values -->
+  <!-- Table values -->
+  <!-- Table values -->
+  <% @gizmo.rows.each do |row| %>
+    <div class="my_row">
+      <% row.cells.each do |cell| %>
+        <div class="my_cell">
+          <%= cell.value %>
+        </div>
+      <% end %>
+    </div>
+    </div>
+  <% end %>
+</div>

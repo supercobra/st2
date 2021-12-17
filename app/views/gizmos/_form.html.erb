@@ -1,0 +1,52 @@
+<%= form_with(model: gizmo) do |form| %>
+  <% if gizmo.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(gizmo.errors.count, "error") %> prohibited this gizmo from being saved:</h2>
+
+      <ul>
+        <% gizmo.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :type, style: "display: block" %>
+    <%= form.text_field :type %>
+  </div>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :text1, style: "display: block" %>
+    <%= form.text_area :text1 %>
+  </div>
+
+  <div>
+    <%= form.label :text2, style: "display: block" %>
+    <%= form.text_area :text2 %>
+  </div>
+
+  <div>
+    <%= form.label :gizmo_id_id, style: "display: block" %>
+    <%= form.text_field :gizmo_id_id %>
+  </div>
+
+  <div>
+    <%= form.label :bool1, style: "display: block" %>
+    <%= form.check_box :bool1 %>
+  </div>
+
+  <div>
+    <%= form.label :int1, style: "display: block" %>
+    <%= form.number_field :int1 %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

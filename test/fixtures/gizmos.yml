@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  name: MyString
+  text1: MyText
+  text2: MyText
+  gizmo_id: one
+  bool1: false
+  int1: 1
+
+two:
+  type: 
+  name: MyString
+  text1: MyText
+  text2: MyText
+  gizmo_id: two
+  bool1: false
+  int1: 1

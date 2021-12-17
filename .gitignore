@@ -1,0 +1,79 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+
+# dependencies
+/node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# emacs
+\#*#
+.\#*
+
+# vim
+*~
+*.swp
+*.swo
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# documentation
+documentation/
+
+# Firebase
+.firebase/*
+
+# Ignore plugins except for the bundled ones.
+
+#!/libs/bam/plugins
+#/libs/bam/plugins/*
+#!/libs/bam/plugins/tsconfig.json
+#!/libs/bam/plugins/tsconfig.lib.json
+#!/libs/bam/plugins/tsconfig.spec.json
+#!/libs/bam/plugins/.eslintrc.json
+#!/libs/bam/plugins/jest.config.js
+#!/libs/bam/plugins/README.md
+#!/libs/bam/plugins/src/index.ts
+#!libs/bam/plugins/misc
+#libs/bam/plugins/misc/*
+#!/libs/bam/plugins/misc/tsconfig.json
+#!/libs/bam/plugins/misc/generate-plugins-import.ts
+/libs/bam/shared/plugin-connector/dist/*
+# Ignore generate imports for workspace plugin features
+/libs/bam/feature/workspace/dist/*
+/libs/bam/ui/workspace-navigation/dist/*
+/libs/bam/plugins/plugins-src/*
+# UI
+client/
+a/
+apps/bamzooka-backend/public/a/

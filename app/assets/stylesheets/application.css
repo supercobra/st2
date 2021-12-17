@@ -1,0 +1,60 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+  .my_table {
+    display: table;
+    cursor: pointer;
+    margin-bottom: 1em;
+    border-top: 1px solid silver;
+    border-right: 1px solid silver;
+  }
+
+  .my_row {
+    display: table-row;
+  }
+
+  .value:hover {
+    background-color: rgba(255, 250, 186, 0.4);
+  }
+
+  .my_cell {
+    display: table-cell;
+    height: 43px;
+      min-width: 150px;
+    white-space: nowrap;
+    border-bottom: 1px solid silver;
+    border-left: 1px solid silver;
+    align-items: center;
+    vertical-align: middle;
+    text-align: left;
+  }
+
+  .alphanumeric-content {
+    padding: 0px 10px;
+    width: 100%;
+  }
+  .other-content {
+    height: 100%;
+    width: 100%;
+  }
+  .number-cell {
+    text-align: right;
+    width: 100%;
+  }
+  .text-cell {
+    text-align: left;
+    width: 100%;
+  }
+

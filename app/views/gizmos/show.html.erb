@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @gizmo %>
+
+<div>
+  <%= link_to "Edit this gizmo", edit_gizmo_path(@gizmo) %> |
+  <%= link_to "Back to gizmos", gizmos_path %>
+
+  <%= button_to "Destroy this gizmo", @gizmo, method: :delete %>
+</div>
