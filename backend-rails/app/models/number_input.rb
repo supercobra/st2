@@ -104,7 +104,7 @@ class NumberInput < Gizmo
     is_required: :bool1,
     help: :string4,
     placeholder: :string2,
-    value_default: :int2,
+    value_default: :int2
   }.freeze
   include HasCustomFields
 

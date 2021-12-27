@@ -1,5 +1,4 @@
-class XTable < Gizmo
-  belongs_to :workspace
-  has_many :x_columns, dependent: :destroy, class_name: Gizmo.to_s, foreign_key: 'gizmo_id'
-  has_many :rows, dependent: :destroy, foreign_key: :gizmo_id
+class Workspace < Gizmo
+  belongs_to :account, foreign_key: :gizmo_id
+  has_many :x_tables, dependent: :destroy, class_name: Gizmo.to_s, foreign_key: 'gizmo_id'
 end

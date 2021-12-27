@@ -11,39 +11,39 @@ import {
   GizmoColorStatusConstructorOptions,
   GizmoValueColorStatus
 } from './gizmo-color-status';
-import { GizmoPage, GizmoPageConstructorOptions } from './gizmo-page';
+import {GizmoPage, GizmoPageConstructorOptions} from './gizmo-page';
 import {
   GizmoInputShortText,
   GizmoInputShortTextConstructorOptions,
   GizmoValueShortText
 } from './gizmo-input-short-text';
-import { GizmoInputLongText, GizmoInputLongTextConstructorOptions } from './gizmo-input-long-text';
-import { GizmoText } from './gizmo-text';
+import {GizmoInputLongText, GizmoInputLongTextConstructorOptions} from './gizmo-input-long-text';
+import {GizmoText} from './gizmo-text';
 import {
   GizmoDropdownOption,
   GizmoDropdownOptionConstructorOptions
 } from './gizmo-dropdown-option';
-import { GizmoDataDropdown, GizmoInputDropdown } from './gizmo-dropdown';
-import { GizmoInputNumber, GizmoValueNumber } from './gizmo-input-number';
-import { GizmoInputDate, GizmoValueDate } from './gizmo-input-date';
-import { GizmoInputYesNo, YES_NO } from './gizmo-input-yes-no';
-import { GizmoInputCheckbox } from './gizmo-input-checkbox';
-import { GizmoAttachment, GizmoAttachmentConstructorOptions } from './gizmo-attachment';
-import { GizmoAttachmentImage } from './gizmo-attachment-image';
-import { GizmoVideo } from './gizmo-video';
-import { GizmoUrl } from './gizmo-url';
+import {GizmoDataDropdown, GizmoInputDropdown} from './gizmo-dropdown';
+import {GizmoInputNumber, GizmoValueNumber} from './gizmo-input-number';
+import {GizmoInputDate, GizmoValueDate} from './gizmo-input-date';
+import {GizmoInputYesNo, YES_NO} from './gizmo-input-yes-no';
+import {GizmoInputCheckbox} from './gizmo-input-checkbox';
+import {GizmoAttachment, GizmoAttachmentConstructorOptions} from './gizmo-attachment';
+import {GizmoAttachmentImage} from './gizmo-attachment-image';
+import {GizmoVideo} from './gizmo-video';
+import {GizmoUrl} from './gizmo-url';
 import {
   GizmoAttachmentInput,
   GizmoAttachmentInputConstructorOptions
 } from './gizmo-attachment-input';
-import { GizmoAttachmentInputSnapshot } from './gizmo-attachment-input-snapshot';
-import { GizmoAttachmentInputImage } from './gizmo-attachment-input-image';
-import { GizmoTaskList, GizmoTaskListConstructorOptions } from './gizmo-task-list';
-import { GizmoInput, GizmoInputConstructorOptions } from './gizmo-input';
-import { GIZMO_DATA_TYPE, GizmoData, GizmoValueConstructorOptions } from './gizmo-data';
-import { GizmoDataPerson, GizmoPerson, GizmoPersonConstructorOptions } from './gizmo-person';
-import { GizmoWithValueConstructorOptions } from './gizmo-with-value';
-import { GizmoInputAssignee, GizmoValueAssignee } from './gizmo-assignee-input';
+import {GizmoAttachmentInputSnapshot} from './gizmo-attachment-input-snapshot';
+import {GizmoAttachmentInputImage} from './gizmo-attachment-input-image';
+import {GizmoTaskList, GizmoTaskListConstructorOptions} from './gizmo-task-list';
+import {GizmoInput, GizmoInputConstructorOptions} from './gizmo-input';
+import {GIZMO_DATA_TYPE, GizmoData, GizmoValueConstructorOptions} from './gizmo-data';
+import {GizmoDataPerson, GizmoPerson, GizmoPersonConstructorOptions} from './gizmo-person';
+import {GizmoWithValueConstructorOptions} from './gizmo-with-value';
+import {GizmoInputAssignee, GizmoValueAssignee} from './gizmo-assignee-input';
 import {LinkedColumnsConfigurationTypes} from "./linked-columns-configurations";
 
 export const resolveGizmo = <T>(gizmoJSON: GizmoInterface): T => {

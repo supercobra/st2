@@ -1,14 +1,11 @@
-class CreateGizmos < ActiveRecord::Migration[7.0]
+class CreateTables < ActiveRecord::Migration[7.0]
   def change
 
-    puts 'creating accounts'
-    raise
     create_table :accounts do |t|
       t.string :name
       t.timestamps
     end
 
-    puts 'createing gizmos'
     create_table :gizmos do |t|
       t.string :type, limit: 55, null: false
       t.bigint :gizmo_id
