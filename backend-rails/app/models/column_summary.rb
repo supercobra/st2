@@ -25,7 +25,7 @@ class ColumnSummary < Gizmo
     when AVG
       x_column.cells.average(:int1)
     when COUNT
-      x_column.cells.count
+      x_column.cells.count(:int1)
     when MIN
       x_column.cells.min(:int1)
     when MAX

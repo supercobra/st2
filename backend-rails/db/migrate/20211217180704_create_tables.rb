@@ -11,6 +11,7 @@ class CreateTables < ActiveRecord::Migration[7.0]
       t.bigint :gizmo_id
       t.string :name
       t.string :description
+      t.integer :position, default: 0, null: false
       t.string :string1
       t.string :string2
       t.string :string3
@@ -41,26 +42,20 @@ class CreateTables < ActiveRecord::Migration[7.0]
       t.boolean :bool7
       t.boolean :bool8
       t.boolean :bool9
-      t.integer :int1
-      t.integer :int2
-      t.integer :int3
-      t.integer :int4
-      t.integer :int5
-      t.integer :int6
-      t.integer :int7
-      t.integer :int8
-      t.integer :int9
-      t.bigint :big_int1
-      t.bigint :big_int2
-      t.bigint :big_int3
-      t.bigint :big_int4
-      t.bigint :big_int5
-      t.bigint :big_int6
-      t.bigint :big_int7
-      t.bigint :big_int8
-      t.bigint :big_int9
+      t.bigint :int1
+      t.bigint :int2
+      t.bigint :int3
+      t.bigint :int4
+      t.bigint :int5
+      t.bigint :int6
+      t.bigint :int7
+      t.bigint :int8
+      t.bigint :int9
       t.timestamps
 
+      t.index :gizmo_id
+      t.index :type
+      t.index :position
       t.index :datetime1
       t.index :datetime2
       t.index :datetime3
@@ -74,15 +69,6 @@ class CreateTables < ActiveRecord::Migration[7.0]
       t.index :int7
       t.index :int8
       t.index :int9
-      t.index :big_int1
-      t.index :big_int2
-      t.index :big_int3
-      t.index :big_int4
-      t.index :big_int5
-      t.index :big_int6
-      t.index :big_int7
-      t.index :big_int8
-      t.index :big_int9
       t.index :bool1
       t.index :bool2
       t.index :bool3
@@ -92,8 +78,6 @@ class CreateTables < ActiveRecord::Migration[7.0]
       t.index :bool7
       t.index :bool8
       t.index :bool9
-      t.index :gizmo_id
-      t.index :type
     end
   end
 end
