@@ -1,4 +1,6 @@
 export enum GIZMO_TYPE {
+  TABLE = 'GizmoTable',
+  ROW = 'GizmoRow',
   SHORT_TEXT_INPUT = 'GizmoShortTextInput',
   LONG_TEXT_INPUT = 'GizmoLongTextInput',
   COLOR_STATUS = 'GizmoGreenYellowRedStatusInput',

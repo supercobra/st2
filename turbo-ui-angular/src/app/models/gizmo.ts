@@ -59,7 +59,6 @@ export abstract class Gizmo implements GizmoInterface {
 
   // Attributes for client only
   bootstrapIconName: string | null;
-  canHaveLogicForNextSection: boolean | undefined;
   isProcessing: boolean | undefined;
   childAdded$ = new Subject<Gizmo>();
 

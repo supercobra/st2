@@ -12,7 +12,6 @@ export enum GIZMO_DATA_TYPE {
   ASSIGNEE = 'GizmoAssignmentValue'
 }
 
-
 export interface GizmoValueConstructorOptions<T> {
   value: T;
   id?: number;
@@ -20,6 +19,7 @@ export interface GizmoValueConstructorOptions<T> {
   template_origin_id?: number;
   card_id?: number;
 }
+
 export abstract class GizmoData<T> {
   id: number | undefined;
   template_origin_id: number | undefined;
