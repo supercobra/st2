@@ -9,20 +9,22 @@ puts 'Seeding...'
 account = Account.create!(name: 'BigCo')
 workspace = Workspace.create!(name: 'Customer service', account: account)
 
-# Create a table
+# Create a table with the following columns:
 xtable = XTable.create!(name: 'Ticket Tracker', workspace: workspace)
 col1 = XColumn.create!(x_table: xtable, name: 'title', value_type: StringInput.to_s, width_in_px: 200)
 col2 = XColumn.create!(x_table: xtable, name: 'description', value_type: StringInput.to_s)
 col3 = XColumn.create!(x_table: xtable, name: 'age', value_type: NumberInput.to_s)
 
-ColumnSummary.create!(x_column: col3, value: ColumnSummary::COUNT)
+# Add a summary row for col3
+ColumnSummary.create!(x_column: col3, value: ColumnSummary::AVG)
 
-# Add data to the table
+# Add one row and cells data to the table
 row = Row.create!(x_table: xtable)
 row.cells << StringValue.create!(value: 'title of first issue')
 row.cells << StringValue.create!(value: 'good description here here here...')
 row.cells << NumberValue.create!(value: 3)
 
+# Add a second row and cells data to the table
 row = Row.create!(x_table: xtable)
 row.cells << StringValue.create!(value: 'title of second issue')
 row.cells << StringValue.create!(value: 'better description here here here...')
