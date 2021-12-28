@@ -14,8 +14,6 @@ export enum GIZMO_DATA_TYPE {
 
 
 export interface GizmoValueConstructorOptions<T> {
-  user: User;
-  user_id: number;
   value: T;
   id?: number;
   type: GIZMO_DATA_TYPE;
