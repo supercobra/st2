@@ -19,7 +19,7 @@ class KolumnSummary < Gizmo
   validates_inclusion_of :value, in: rules
 
   def compute_value
-    case(value)
+    case value
     when SUM
       kolumn.cells.sum(:int1)
     when AVG
@@ -35,4 +35,3 @@ class KolumnSummary < Gizmo
     end
   end
 end
-
