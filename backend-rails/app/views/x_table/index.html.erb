@@ -1,7 +1,7 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Table: <%= @gizmo.name %></h1>
-columns: <%= @gizmo.table_definition.x_columns.count %>
+columns: <%= @gizmo.kolumns.count %>
 
 <!-- Table -->
 <!-- Table -->
@@ -13,7 +13,7 @@ columns: <%= @gizmo.table_definition.x_columns.count %>
   <!-- Table header-->
   <!-- Table header-->
   <div class="my_row">
-    <% @gizmo.table_definition.x_columns.each do |col| %>
+    <% @gizmo.x_columns.each do |col| %>
       <div class="my_cell">
         <%= col.name %>
       </div>

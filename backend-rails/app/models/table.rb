@@ -1,6 +1,6 @@
-class XTable < Gizmo
+class Table < Gizmo
   belongs_to :workspace, foreign_key: :gizmo_id
-  has_many :x_columns, dependent: :destroy, foreign_key: :gizmo_id
+  has_many :kolumns, dependent: :destroy, foreign_key: :gizmo_id
   has_many :rows, dependent: :destroy, foreign_key: :gizmo_id
 
   def cells

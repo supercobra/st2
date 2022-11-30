@@ -1,4 +1,4 @@
-class XColumn < Gizmo
+class Kolumn < Gizmo
 
   CUSTOM_FIELDS = {
     value_type: :string1,
@@ -8,8 +8,8 @@ class XColumn < Gizmo
 
   VALUE_TYPES = [StringInput.to_s, NumberInput.to_s].freeze
 
-  belongs_to :x_table, foreign_key: :gizmo_id, class_name: Gizmo.to_s
-  has_one :column_summary, foreign_key: :gizmo_id
+  belongs_to :table, foreign_key: :gizmo_id, class_name: Gizmo.to_s
+  has_one :kolumn_summary, foreign_key: :gizmo_id
 
   validates :width_in_px, numericality: { only_integer: true, greater_than: 0 }
   validates_inclusion_of :value_type, in: VALUE_TYPES
