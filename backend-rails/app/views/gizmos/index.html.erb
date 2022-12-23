@@ -3,12 +3,15 @@
 <h1>Gizmos</h1>
 
 <div id="gizmos">
-  <% @gizmos.each do |gizmo| %>
-    <%= render gizmo %>
-    <p>
-      <%= link_to "Show this gizmo", gizmo %>
-    </p>
+  <table>
+    <% @gizmos.each do |gizmo| %>
+      <tr>
+        <td>
+          <%= gizmo.type %> - <%= gizmo.name %>
+        </td>
+      </tr>
   <% end %>
+  </table>
 </div>
 
 <%= link_to "New gizmo", new_gizmo_path %>

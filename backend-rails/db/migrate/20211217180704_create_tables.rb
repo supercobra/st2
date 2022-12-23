@@ -9,6 +9,7 @@ class CreateTables < ActiveRecord::Migration[7.0]
     create_table :gizmos do |t|
       t.string :type, limit: 55, null: false
       t.bigint :gizmo_id
+      t.bigint :account_id
       t.string :name
       t.string :description
       t.integer :position, default: 0, null: false

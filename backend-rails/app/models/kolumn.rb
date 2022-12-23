@@ -17,7 +17,7 @@ class Kolumn < Gizmo
   before_validation :set_default_values, on: :create
 
   def cells
-    x_table.cells.where(position: position)
+    table.cells.where(position: position)
   end
 
   def set_default_values

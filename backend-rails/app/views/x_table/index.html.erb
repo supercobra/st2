@@ -1,35 +1,54 @@
 <p style="color: green"><%= notice %></p>
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+</style>
 
-<h1>Table: <%= @gizmo.name %></h1>
-columns: <%= @gizmo.kolumns.count %>
+<% @gizmos.each do |gizmo| %>
+  <h1>Table: <%= gizmo.name %></h1>
+  columns: <%= gizmo.kolumns.count %>
 
-<!-- Table -->
-<!-- Table -->
-<!-- Table -->
-<!-- Table -->
-<div class="my_table">
-  <!-- Table header-->
-  <!-- Table header-->
-  <!-- Table header-->
-  <!-- Table header-->
-  <div class="my_row">
-    <% @gizmo.x_columns.each do |col| %>
-      <div class="my_cell">
-        <%= col.name %>
-      </div>
-    <% end %>
-  </div>
-  <!-- Table values -->
-  <!-- Table values -->
-  <!-- Table values -->
-  <% @gizmo.rows.each do |row| %>
-    <div class="my_row">
-      <% row.cells.each do |cell| %>
-        <div class="my_cell">
-          <%= cell.value %>
-        </div>
+  <!-- Table -->
+  <!-- Table -->
+  <!-- Table -->
+  <!-- Table -->
+  <table>
+    <!-- Table header-->
+    <!-- Table header-->
+    <!-- Table header-->
+    <!-- Table header-->
+    <tr>
+      <% gizmo.kolumns.each do |col| %>
+        <td>
+          <%= col.name %>
+        </td>
       <% end %>
-    </div>
-    </div>
-  <% end %>
-</div>
+    </tr>
+    <!-- Table values -->
+    <!-- Table values -->
+    <!-- Table values -->
+      <% gizmo.rows.each do |row| %>
+      <tr>
+        <% row.cells.each do |cell| %>
+          <td>
+            <%= cell.value %>
+          </td>
+        <% end %>
+      <% end %>
+    </tr>
+
+    <!-- summary -->
+    <tr>
+      <% gizmo.kolumns.each do |col| %>
+        <td>
+          <% if !col.gizmos.first.nil? %>
+            <%= col.gizmos.first.class.to_s %> =
+            <%= col.gizmos.first.compute_value.to_s %>
+          <% end %>
+        </td>
+      <% end %>
+    </tr>
+  </table>
+<% end %>

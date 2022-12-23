@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2021_12_17_180704) do
   create_table "gizmos", force: :cascade do |t|
     t.string "type", limit: 55, null: false
     t.bigint "gizmo_id"
+    t.bigint "account_id"
     t.string "name"
     t.string "description"
     t.integer "position", default: 0, null: false

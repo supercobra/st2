@@ -3,7 +3,8 @@ class GizmosController < ApplicationController
 
   # GET /gizmos or /gizmos.json
   def index
-    @gizmos = Gizmo.all
+    @gizmos = Workspace.first.gizmos
+    render 'x_table/index'
   end
 
   # GET /gizmos/1 or /gizmos/1.json
